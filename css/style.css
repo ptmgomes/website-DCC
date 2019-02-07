@@ -1,0 +1,236 @@
+/* General CSS for the body */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+  /*background-color: #c1ccc9;*/
+  font-family: 'Lato', serif;
+}
+.wrapper {
+  width: inherit;
+  height: inherit;
+  margin: auto;
+}
+/* CSS for the left and right panels plus the screen modifications */
+.left {
+  width: 40%;
+  height: 100%;
+  background-color: #66cbbe;
+  position: fixed;
+  left: 0;
+}
+.right {
+  width: 60%;
+  height: auto;
+  position: absolute;
+  right: 0;
+  overflow: auto;
+}
+@media screen and (max-width: 750px) {
+    .left {
+        width: 100%;
+        height: 95vh;
+        position: relative
+    }
+    .right {
+        width: 100%;
+        height: auto;
+        position: static
+    }
+}
+/* CSS for the content of the panels */
+.content{
+  position: relative;
+  box-sizing: border-box;
+}
+/* Left Content */
+.left .content{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center; 
+}
+.passport img{
+  width: 70%;
+  height: auto;
+}
+.left .content h1 {
+  color: white;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: bold;
+}
+.left .content p{
+  color: white;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: normal;
+}
+.left .content p a{
+  color: white;
+  font-style: normal;
+  position: relative;
+  font-weight: normal;
+  text-decoration: none;
+  border-bottom: 1px solid #f79210;
+}
+.left .content p a:hover{
+  color: #f79210;
+  font-style: normal;
+  position: relative;
+  font-weight: normal;
+  text-decoration: none;
+  border-bottom: none;
+}
+/* Contacts */
+.button {
+  background-color: #f79210;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: bold;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 1rem 1rem;
+  cursor: pointer;
+}
+.button:hover{
+  transform: scale(1.1);
+}
+/* Social */
+.social-list{
+  height: 2rem;
+  margin: 1rem 0rem;
+}
+.social-item:not(:last-child){
+  height: inherit;
+  width: inherit;
+  text-decoration: none;
+  padding-right: 0.5rem;
+}
+.social-item:last-child{
+  height: inherit;
+  width: inherit;
+  text-decoration: none;
+}
+.social-img{
+  height: inherit;
+  width: inherit;
+}
+svg path, ellipse, polygon{
+    fill: white;
+}
+.social-img:hover path,
+.social-img:focus path,
+.social-img:hover ellipse,
+.social-img:focus ellipse,
+.social-img:hover polygon,
+.social-img:focus polygon{
+    fill: #f79210;
+}
+/* Right Content */
+.right .content{
+  width: 100%;
+  padding: 0rem 1rem;
+  font-size: 1rem;
+  font-style: normal;
+}
+.right .content a{
+  color: inherit;
+  font-style: normal;
+  position: relative;
+  font-weight: normal;
+  text-decoration: none;
+  border-bottom: 1px solid #f79210;
+}
+.right .content a:hover{
+  color: #f79210;
+  font-style: normal;
+  position: relative;
+  font-weight: normal;
+  text-decoration: none;
+  border-bottom: none;
+}
+.tag{
+  color: #f79210;
+  padding: 0px;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: bold;
+}
+.about{
+  padding: 0px;
+}
+.about p{
+  margin: 0rem;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+}
+.list-item{
+  display: list-item;
+  margin-left: 1.3em;
+  list-style-type: inherit;
+}
+.list-item p{
+  margin: 0.2rem;
+}
+.list-item-note{
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: normal;
+}
+.timeline{
+  display: flex;
+  flex-direction: column;
+}
+.timeline-item{
+  display: list-item;
+  margin-left: 1.3rem;
+  list-style-type: none;
+}
+.timeline-item-date{
+  position: relative;
+  left:-1.3rem;
+  font-style: italic;
+}
+.timeline-item p{
+  margin: 0.2rem;
+}
+.timeline-item-note{
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: normal;
+}
+.order{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.order-item{
+  display: list-item;
+  margin-left: 1.3em;
+  list-style-type: decimal-leading-zero;
+}
+.order-item p{
+  margin: 0.2rem;
+}
+.order-item-note{
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: normal;
+}
+.footer{
+  margin: 2rem;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+}
